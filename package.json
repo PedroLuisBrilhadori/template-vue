@@ -10,15 +10,20 @@
     "lint": "eslint --ext .js,.vue src",
     "pretty": "pretty-quick --staged",
     "lint-staged": "yarn pretty && yarn lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "dependencies": {
     "vue": "^3.2.37",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@vitejs/plugin-vue": "^3.0.0",
     "autoprefixer": "^10.4.7",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^9.2.0",
@@ -34,5 +39,10 @@
     "template",
     "vuejs",
     "configured"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
